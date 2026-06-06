@@ -28,14 +28,14 @@ export function AppFooter(): ReactElement {
             <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/TransparentBrainOnly.png"
-                alt="Cogni"
+                alt="Pandora"
                 width={24}
                 height={24}
               />
-              <span className="font-bold text-gradient-accent">Cogni</span>
+              <span className="font-bold text-gradient-accent">Pandora</span>
             </Link>
             <p className="mt-3 text-muted-foreground text-sm">
-              Web3 Gov + Web2 AI
+              Launch handoffs, shared knowledge, and community-owned AI.
             </p>
           </div>
 
@@ -76,7 +76,7 @@ export function AppFooter(): ReactElement {
       <div className="border-t">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-5 sm:px-6">
           <p className="text-muted-foreground text-xs">
-            &copy; {new Date().getFullYear()} Cogni DAO
+            &copy; {new Date().getFullYear()} Cogni DAO / Pandora
           </p>
           <div className="flex items-center gap-5">
             {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (

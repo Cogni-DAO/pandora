@@ -37,14 +37,14 @@ import {
  */
 const AVAILABLE_GRAPHS: readonly GraphOption[] = [
   {
-    graphId: "langgraph:poly-brain" satisfies GraphId,
-    name: "Poly Brain",
-    description: "Prediction market analyst with live market data",
+    graphId: "langgraph:brain" satisfies GraphId,
+    name: "Pandora Brain",
+    description: "Code-aware launch assistant with repo access",
   },
   {
-    graphId: "langgraph:brain" satisfies GraphId,
-    name: "Brain",
-    description: "Code-aware assistant with repo access",
+    graphId: "langgraph:research" satisfies GraphId,
+    name: "Research",
+    description: "Deep research with web search",
   },
   {
     graphId: "langgraph:poet" satisfies GraphId,
@@ -55,11 +55,6 @@ const AVAILABLE_GRAPHS: readonly GraphOption[] = [
     graphId: "langgraph:ponderer" satisfies GraphId,
     name: "Ponderer",
     description: "Philosophical thinker",
-  },
-  {
-    graphId: "langgraph:research" satisfies GraphId,
-    name: "Research",
-    description: "Deep research with web search",
   },
   {
     graphId: "langgraph:browser" satisfies GraphId,

@@ -54,9 +54,8 @@ ENV AUTH_SECRET=${AUTH_SECRET_BUILD}
 RUN --mount=type=cache,id=next-cache-node-template,target=/app/app/.next/cache,sharing=locked \
     pnpm --filter @cogni/node-template-app build
 
-# Migrator — node-template scaffold migrator (task.0324).
-# node-template is not deployed; this stage exists so forks have a working template.
-# Copy only core schema + node-template's own migrations + its drizzle config.
+# Migrator — Pandora node migrator.
+# Copy only core schema + this node's own migrations + its drizzle config.
 FROM base AS migrator
 WORKDIR /app
 
@@ -83,7 +82,7 @@ ENV PORT=3200
 ENV HOSTNAME=0.0.0.0
 ENV LOG_FORMAT=json
 
-LABEL org.opencontainers.image.title="cogni-node-template"
+LABEL org.opencontainers.image.title="pandora"
 
 # Copy standalone bundle (includes production dependencies)
 # outputFileTracingRoot=../ means standalone output mirrors this repo-root workspace.

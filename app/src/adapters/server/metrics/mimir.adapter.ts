@@ -36,7 +36,7 @@ const logger = makeLogger({ component: "MimirMetricsAdapter" });
 // TODO: Extract to shared metrics-catalog.ts to sync with Alloy config + tool description
 // ─────────────────────────────────────────────────────────────────────────────
 
-const ALLOWED_SERVICES = ["cogni-template"] as const; // Must match Alloy scrape targets
+const ALLOWED_SERVICES = ["pandora"] as const; // Must match Alloy scrape targets
 const ALLOWED_TEMPLATES: readonly MetricTemplate[] = [
   "request_rate",
   "error_rate",

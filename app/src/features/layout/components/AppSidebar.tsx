@@ -3,7 +3,7 @@
 
 /**
  * Module: `@features/layout/components/AppSidebar`
- * Purpose: Cogni-specific sidebar composition with nav items, collapsible chat threads, and external links.
+ * Purpose: Pandora-specific sidebar composition with nav items, collapsible chat threads, and external links.
  * Scope: Composes vendor Sidebar primitives into the app sidebar. Does not handle authentication or data fetching.
  * Invariants: Admin nav item is shown only when the session wallet is a repo-spec approver (`session.user.isApprover`); the `(admin)/` layout still enforces server-side. Chat threads always visible as collapsible menu item.
  * Side-effects: reads NextAuth session (`useSession`)
@@ -53,7 +53,7 @@ const NAV_ITEMS = [
 
 const EXTERNAL_LINKS = [
   {
-    href: "https://github.com/cogni-DAO/cogni-template",
+    href: "https://github.com/Cogni-DAO/pandora",
     label: "GitHub",
     icon: Github,
   },
@@ -90,18 +90,18 @@ export function AppSidebar(): ReactElement {
       <SidebarHeader className="h-16 shrink-0 justify-center">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild tooltip="Cogni">
+            <SidebarMenuButton size="lg" asChild tooltip="Pandora">
               <Link href="/chat">
                 <div className="flex aspect-square size-8 items-center justify-center">
                   <Image
                     src="/TransparentBrainOnly.png"
-                    alt="Cogni"
+                    alt="Pandora"
                     width={24}
                     height={24}
                   />
                 </div>
                 <span className="truncate font-bold text-gradient-accent">
-                  Cogni
+                  Pandora
                 </span>
               </Link>
             </SidebarMenuButton>

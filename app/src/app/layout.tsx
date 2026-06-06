@@ -3,7 +3,7 @@
 
 /**
  * Module: `@app/layout`
- * Purpose: Root layout for the node-template (used as scaffold for new nodes) with font configuration and global styles.
+ * Purpose: Root layout for Pandora with font configuration and global styles.
  * Scope: Async server component. Reads request cookies, computes wagmi `initialState`,
  *   passes it to the client `Providers` so `<WagmiProvider>` hydrates without mismatch
  *   (per https://wagmi.sh/react/guides/ssr).
@@ -34,8 +34,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Cogni",
-  description: "Web3 Gov + Web2 AI",
+  title: "Pandora - Cogni Node",
+  description:
+    "A Cogni node for launch handoffs, shared knowledge, and community-owned AI operations.",
 };
 
 // See operator/app/src/app/layout.tsx for rationale — `headers()` in the
