@@ -374,7 +374,7 @@ function createContainer(): Container {
   const env = serverEnv();
   const nodeId = getNodeId();
   const db = getAppDb();
-  const log = makeLogger({ service: "cogni-template", nodeId });
+  const log = makeLogger({ service: "pandora", nodeId });
 
   // Startup log - confirm config in Loki (no URLs/secrets)
   log.info(

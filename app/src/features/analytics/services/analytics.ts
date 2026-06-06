@@ -112,7 +112,7 @@ export async function getAnalyticsSummary(
   const start = new Date(now.getTime() - config.durationSeconds * 1000);
 
   // Build base filters
-  const baseFilters = `app="cogni-template",env="${params.env}",route!="meta.metrics"`;
+  const baseFilters = `app="pandora",env="${params.env}",route!="meta.metrics"`;
 
   // Query request count denominator (for k-anonymity)
   const denominatorQuery = `sum(increase(http_requests_total{${baseFilters}}[${config.step}]))`;
@@ -150,7 +150,7 @@ export async function getAnalyticsSummary(
     }),
     // Total tokens
     metricsQuery.queryInstant({
-      query: `sum(increase(ai_llm_tokens_total{app="cogni-template",env="${params.env}"}[${params.window}]))`,
+      query: `sum(increase(ai_llm_tokens_total{app="pandora",env="${params.env}"}[${params.window}]))`,
       time: now,
     }),
     // Error rate (percentage)
@@ -167,7 +167,7 @@ export async function getAnalyticsSummary(
     }),
     // Token rate timeseries
     metricsQuery.queryRange({
-      query: `sum(increase(ai_llm_tokens_total{app="cogni-template",env="${params.env}"}[${config.step}]))`,
+      query: `sum(increase(ai_llm_tokens_total{app="pandora",env="${params.env}"}[${config.step}]))`,
       start,
       end: now,
       step: config.step,

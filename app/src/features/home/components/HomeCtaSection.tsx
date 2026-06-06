@@ -26,7 +26,7 @@ export function HomeCtaSection(): ReactElement {
       paragraph="Our template provides everything you need for crypto-funded, AI-powered organizations. Focus on your domain logic, not infrastructure."
       action={
         <a
-          href="https://github.com/cogni-template/cogni-template"
+          href="https://github.com/Cogni-DAO/pandora"
           target="_blank"
           rel="noopener"
         >

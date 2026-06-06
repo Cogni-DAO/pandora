@@ -53,7 +53,7 @@ export function AppTopBar(): ReactElement {
           </a>
           <GithubButton
             username="cogni-DAO"
-            repo="cogni-template"
+            repo="pandora"
             size="lg"
             variant="default"
             showGithubIcon={true}

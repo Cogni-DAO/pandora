@@ -39,7 +39,7 @@ function logAppStarted(): void {
   }
   const bootLogger = pino({
     base: {
-      app: "cogni-template",
+      app: "pandora",
       // biome-ignore lint/style/noProcessEnv: startup log before config framework
       service: process.env.SERVICE_NAME ?? "app",
     },
@@ -132,7 +132,7 @@ export async function register(): Promise<void> {
   logAppStarted();
 
   // Self-register governance + ledger(epoch) Temporal schedules at boot, so a node (incl. a
-  // forked node-template) goes live without an operator/deploy-pipeline step. Replaces the
+  // forked node) goes live without an operator/deploy-pipeline step. Replaces the
   // removed `scripts/ci/deploy.sh` Step 10.1. Fire-and-forget + fail-soft; the helper retries
   // while the HTTP server binds. Skipped in test.
   // biome-ignore lint/style/noProcessEnv: startup check before the config framework

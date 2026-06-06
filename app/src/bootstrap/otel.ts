@@ -21,8 +21,8 @@ import { context, type Span, SpanStatusCode, trace } from "@opentelemetry/api";
 /** Zero trace ID (indicates SDK not properly initialized or noop tracer) */
 const ZERO_TRACE_ID = "00000000000000000000000000000000";
 
-/** Default tracer name for Cogni app */
-const TRACER_NAME = "cogni-template";
+/** Default tracer name for Pandora app */
+const TRACER_NAME = "pandora";
 
 /**
  * Result type from withRootSpan callback.
